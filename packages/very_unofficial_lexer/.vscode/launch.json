@@ -1,0 +1,11 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Run Tests",
+			"type": "dart",
+			"request": "launch",
+			"program": "./test/"
+		},
+	]
+}

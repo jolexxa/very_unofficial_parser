@@ -1,0 +1,8 @@
+include: package:very_good_analysis/analysis_options.2.3.0.yaml
+
+linter:
+  rules:
+    # Code coverage doesn't work with super() on const classes :'(
+    prefer_const_constructors_in_immutables: false
+    avoid_bool_literals_in_conditional_expressions: false
+    invariant_booleans: false

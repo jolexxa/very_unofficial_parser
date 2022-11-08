@@ -1,0 +1,21 @@
+name: very_unofficial_lexer
+description: Unofficial Dart language lexer / tokenizer / scanner.
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ">=2.18.0 <3.0.0"
+
+dependencies:
+  equatable: ^2.0.3
+  string_unescape: ^2.0.0
+  strings: ^0.2.2
+
+dev_dependencies:
+  mocktail: ^0.1.4
+  test: ^1.17.11
+  test_coverage_badge: ^0.2.0
+  very_good_analysis: ^2.4.0
+
+scripts:
+  coverage: ./script/coverage.sh
