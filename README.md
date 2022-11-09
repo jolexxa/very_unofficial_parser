@@ -56,6 +56,10 @@ A checklist of the implemented features is provided below.
 - [x] Raw strings, single and multiline simple interpolated strings
 - [ ] Single and multiline strings with complex interpolation (in progress)
 
+#### Misc
+
+- [x] Special handling for trivia tokens
+
 ## Dart Analyzer and Historical Issues 
 
 Dart's analyzer API's are tied to certain platforms and not technically intended for public use (although that never stopped anyone).

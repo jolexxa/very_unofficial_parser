@@ -41,3 +41,15 @@ List<Token> tokenList(String source) {
   }
   return tokens;
 }
+
+/// Returns a list of tokens, ignoring nothing.
+List<Token> allTokens(String source) {
+  final lexer = Lexer(source);
+  final tokens = <Token>[];
+  var token = lexer.read();
+  while (token is! EofToken) {
+    tokens.add(token);
+    token = lexer.read();
+  }
+  return tokens;
+}

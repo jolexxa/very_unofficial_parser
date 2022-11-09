@@ -4,9 +4,15 @@
     "endtemplate",
     "mocktail",
     "Nystrom",
-    "Paren",
     "Parselet",
     "Parselets",
-    "Thorsten"
+    "Thorsten",
+    "genhtml",
+    "lcov",
+    "paren",
+    "pubspec",
+    "Ravi",
+    "Sethi",
+    "Ullman"
   ]
 }

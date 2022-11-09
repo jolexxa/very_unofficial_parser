@@ -1,22 +1,10 @@
-<!--
-  Thanks for contributing!
-
-  Provide a description of your changes below and a general summary in the title
-
-  Please look at the following checklist to ensure that your PR can be accepted quickly:
--->
-
-## Status
-
-**READY/IN DEVELOPMENT/HOLD**
-
 ## Description
 
-<!--- Describe your changes in detail -->
+Describe your changes here — please and thank you!
 
 ## Type of Change
 
-<!--- Put an `x` in all the boxes that apply: -->
+<!-- Check all that apply -->
 
 - [ ] ✨ New feature (non-breaking change which adds functionality)
 - [ ] 🛠️ Bug fix (non-breaking change which fixes an issue)
