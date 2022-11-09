@@ -12,6 +12,20 @@ on:
 jobs:
   semantic_pull_request:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/semantic_pull_request.yml@v1
-
-  build:
+  
+  build_lexer:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/dart_package.yml@v1
+    with:
+      working_directory: "packages/very_unofficial_lexer"
+
+  build_parser:
+    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/dart_package.yml@v1
+  
+  spell_check:
+    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/spell_check.yml@v1
+    with:
+      config: cspell.json
+      includes: |
+        **/*.{dart,md,yaml}
+        !.dart_tool/**/*.{dart,yaml}
+        .*/**/*.yml
