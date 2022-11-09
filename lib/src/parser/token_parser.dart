@@ -19,7 +19,7 @@ class TokenParser {
   /// Create a new token parser with a never-ending source of [tokens].
   TokenParser(this.tokens);
 
-  ///A never ending source of tokens.
+  /// A never ending source of tokens.
   final Iterator<Token> tokens;
 
   final List<Token> _tokenCache = [];

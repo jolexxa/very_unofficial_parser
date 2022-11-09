@@ -33,4 +33,17 @@ abstract class Token extends Equatable {
   @override
   String toString() =>
       '${type.toString().split('.').last}(`${escape(lexeme)}`)';
+
+  /// Trivia tokens that precede this token. Don't access this before it's been
+  /// set with [setTrivia].
+  late final List<TriviaToken> trivia;
+
+  /// Sets the trivia tokens that precede this token. This can only be called
+  /// once.
+  void setTrivia(List<TriviaToken> trivia) {
+    this.trivia = List.unmodifiable(trivia);
+  }
 }
+
+/// Interface for trivial tokens.
+abstract class TriviaToken implements Token {}

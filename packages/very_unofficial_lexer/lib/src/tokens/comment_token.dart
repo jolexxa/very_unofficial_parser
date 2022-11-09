@@ -3,7 +3,7 @@ import 'package:very_unofficial_lexer/src/lexical/lexical.dart';
 import 'package:very_unofficial_lexer/src/tokens/token.dart';
 
 /// Identifier token.
-class CommentToken extends Token {
+class CommentToken extends Token implements TriviaToken {
   /// Create a new [CommentToken] with the specified properties.
   CommentToken({
     required LexerState state,

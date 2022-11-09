@@ -14,14 +14,20 @@ class TriviaTable {
   /// {@macro trivia_table}
   TriviaTable();
 
-  final Map<Token, List<Token>> _trivia = {};
+  final Map<Token, List<TriviaToken>> _trivia = {};
 
-  /// Add a [trivialToken] to the list of trivia for [token].
-  void addTrivia(Token token, List<Token> trivialToken) {
-    final trivia = (_trivia[token] ?? [])..addAll(trivialToken);
+  /// The number of trivia tokens stored in the table.
+  int get numTriviaTokens => _trivia.values.fold(
+        0,
+        (previousValue, element) => previousValue + element.length,
+      );
+
+  /// Add a [triviaTokens] to the list of trivia for [token].
+  void addTrivia(Token token, List<TriviaToken> triviaTokens) {
+    final trivia = (_trivia[token] ?? [])..addAll(triviaTokens);
     _trivia[token] = trivia;
   }
 
   /// Get the trivia tokens associated with [token], if any.
-  List<Token> getTrivia(Token token) => _trivia[token] ?? const [];
+  List<TriviaToken> getTrivia(Token token) => _trivia[token] ?? const [];
 }
