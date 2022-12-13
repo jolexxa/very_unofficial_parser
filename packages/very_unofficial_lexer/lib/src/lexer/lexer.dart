@@ -181,8 +181,10 @@ class Lexer {
 
   /// Advances the lexer position if the next character matches the [expected]
   /// character.
-  bool match(String expected) =>
-      (isAtEnd || peek != expected) ? false : advance() != '';
+  bool match(String expected) {
+    if (isAtEnd || peek != expected) return false;
+    return advance() != '';
+  }
 
   /// Create an error token for the current position with the specified [hint].
   ErrorToken error(String hint) {
